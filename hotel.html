@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Готелі – швидке бронювання онлайн</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 30px;
+    color: #111;
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+h1 { font-size: 36px; margin-bottom: 30px; }
+h2 { font-size: 28px; margin-bottom: 20px; }
+h3 { font-size: 22px; margin-bottom: 15px; }
+
+/* МЕНЮ */
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px 0;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.nav-item { position: relative; }
+
+.nav-item button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+/* ПІДМЕНЮ */
+.submenu {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    min-width: 250px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+    list-style: none;
+    padding: 5px 0;
+    margin: 5px 0 0 0;
+    border-radius: 6px;
+    z-index: 100;
+    transform: translateY(10px);
+    transition: all 0.25s ease;
+}
+
+.submenu .submenu {
+    top: 0;
+    left: 100%;
+}
+
+.submenu li a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.submenu li a:hover {
+    background-color: #f5f5f5;
+    color: #4CAF50;
+}
+
+/* тільки перший рівень hover */
+@media (min-width: 769px) {
+    .nav-item:hover > .submenu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+}
+
+/* другий рівень тільки по кліку */
+.has-children.open > .submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.has-children > a::after {
+    content: " ▶";
+    font-size: 10px;
+    float: right;
+}
+
+/* КОНТЕНТ */
+.about-left {
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+.inline-photo {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+.bottom-photo {
+    width: 100%;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+/* АДАПТИВ */
+@media (max-width: 768px) {
+    .nav-menu {
+        flex-direction: column;
+    }
+
+    .submenu {
+        position: static;
+        box-shadow: none;
+        transform: none;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<h1>Готелі – швидке бронювання онлайн</h1>
+
+<ul class="nav-menu">
+    <li class="nav-item">
+        <button>Тури та екскурсії</button>
+        <ul class="submenu">
+             <li><a href="Тур%20агенство.html" target="_blank">Відкрийте для себе тури по всьому світу</a></li>
+
+            <li class="nav-item has-children">
+                <a href="#">Групові тури</a>
+                <ul class="submenu">
+                    <li><a href="#">Круїзи – морські та річкові</a></li>
+                    <li><a href="#">Екскурсії по країнах Європи</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item has-children">
+                <a href="#">Індивідуальні тури</a>
+                <ul class="submenu">
+                    <li><a href="#">Персональні маршрути</a></li>
+                    <li><a href="#">Трансфери та додаткові послуги</a></li>
+                    <li><a href="#">Оренда авто та страхування</a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+
+    <li class="nav-item">
+        <button>Бронювання</button>
+        <ul class="submenu">
+             <li><a href="hotel.html" target="_blank">Готелі – швидке бронювання онлайн</a></li>
+             <li><a href="apartaments.html" target="_blank">Апартаменти для комфорту</a></li>
+            <li><a href="villa.html" target="_blank">Вілли та елітне проживанняу</a></li>
+        </ul>
+    </li>
+
+    <li class="nav-item">
+        <button>Авіаквитки</button>
+        <ul class="submenu">
+            <li><a href="aviakvytky.html" target="_blank">Квитки на рейси по всьому світу</a></li>
+        </ul>
+    </li>
+</ul>
+
+<main class="about-left">
+
+<h2>Готелі – швидке бронювання онлайн</h2>
+<p>Вибирайте серед наших рекомендованих готелів і бронюйте номер швидко та безпечно. Ми підібрали різні категорії для будь-якого бюджету та потреб.</p>
+
+<div class="hotel-list" style="display: flex; flex-wrap: wrap; gap: 20px;">
+
+  <!-- Готель 1 -->
+  <div class="hotel" style="flex: 1 1 300px; border: 1px solid #ddd; border-radius: 10px; overflow: hidden; padding: 10px;">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkrampThZ63wSoYqWOBfvFljcnXcrx_m-r3w&s" alt="Готель Роял" style="width:100%; border-radius: 10px;">
+    <h4>Готель Роял</h4>
+    <p>Стильні номери стандарт та люкс, ресторан, спа, Wi-Fi, центр міста.</p>
+    <button style="background-color:#4CAF50; color:white; padding:10px 20px; border:none; border-radius:6px; cursor:pointer;">Забронювати онлайн</button>
+  </div>
+
+  <!-- Готель 2 -->
+  <div class="hotel" style="flex: 1 1 300px; border: 1px solid #ddd; border-radius: 10px; overflow: hidden; padding: 10px;">
+    <img src="https://img.poehalisnami.ua/static/hotels/egipet/marsa-alam/h302096/small/booking302096_1302096_638736153081474848.jpg" alt="Готель Преміум" style="width:100%; border-radius: 10px;">
+    <h4>Готель Преміум</h4>
+    <p>Люксові апартаменти, панорамний вид, басейн, бар, конференц-зали.</p>
+    <button style="background-color:#4CAF50; color:white; padding:10px 20px; border:none; border-radius:6px; cursor:pointer;">Забронювати онлайн</button>
+  </div>
+
+  <!-- Готель 3 -->
+  <div class="hotel" style="flex: 1 1 300px; border: 1px solid #ddd; border-radius: 10px; overflow: hidden; padding: 10px;">
+    <img src="https://gohotels.com.ua/images/gohotels/hotel/3434/343340/dd401e5e9586c8ad75b52a6f25467f39.jpg" alt="Готель Сіті" style="width:100%; border-radius: 10px;">
+    <h4>Готель Сіті</h4>
+    <p>Затишні номери для ділових поїздок, Wi-Fi, сніданок включено, парковка.</p>
+    <button style="background-color:#4CAF50; color:white; padding:10px 20px; border:none; border-radius:6px; cursor:pointer;">Забронювати онлайн</button>
+  </div>
+
+  <!-- Готель 4 -->
+  <div class="hotel" style="flex: 1 1 300px; border: 1px solid #ddd; border-radius: 10px; overflow: hidden; padding: 10px;">
+    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/c2/1a/f0/caption.jpg?w=1200&h=-1&s=1" alt="Готель Лакшері" style="width:100%; border-radius: 10px;">
+    <h4>Готель Лакшері</h4>
+    <p>Ексклюзивні апартаменти, джакузі, спа, ресторан, приватна тераса з видом на місто.</p>
+    <button style="background-color:#4CAF50; color:white; padding:10px 20px; border:none; border-radius:6px; cursor:pointer;">Забронювати онлайн</button>
+  </div>
+
+  <!-- Готель 5 -->
+  <div class="hotel" style="flex: 1 1 300px; border: 1px solid #ddd; border-radius: 10px; overflow: hidden; padding: 10px;">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRx8aIAV1_83CTN-59SQEpLxmR2SB1sQe2gdw&s" alt="Готель Комфорт" style="width:100%; border-radius: 10px;">
+    <h4>Готель Комфорт</h4>
+    <p>Сімейні та стандартні номери, Wi-Fi, безкоштовний сніданок, близько до пляжу та транспорту.</p>
+    <button style="background-color:#4CAF50; color:white; padding:10px 20px; border:none; border-radius:6px; cursor:pointer;">Забронювати онлайн</button>
+  </div>
+
+</div>
+</main>
+
+<script>
+document.querySelectorAll('.has-children > a').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        this.parentElement.classList.toggle('open');
+    });
+});
+</script>
+
+</body>
+</html>
